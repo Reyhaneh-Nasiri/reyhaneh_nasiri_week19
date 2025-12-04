@@ -10,4 +10,20 @@ const axiosDefaults = {
 };
 const api = axios.create(axiosDefaults);
 
+api.interceptors.request.use(
+  (config) => {
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+// Handle responses and errors
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    console.log(error);
+    return Promise.reject(error);
+  }
+);
+
 export default api;
