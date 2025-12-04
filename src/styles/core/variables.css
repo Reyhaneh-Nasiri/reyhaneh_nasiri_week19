@@ -1,0 +1,38 @@
+:root {
+  /* Font Families */
+  --font-family-base: "Vazirmatn", sans-serif;
+
+  /* Color Tokens – Brand & Neutrals */
+  --primary-color: #55a3f0;
+  --text-main: #282828;
+  --bg-color: #f7f8f8;
+  --card-bg-color: #ffffff;
+  --border-color: #e4e4e4;
+
+  /* Semantic Colors (Status) */
+  --success: #4ade80;
+  --error: #f43f5e;
+
+  /* Typography */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+
+  /* 12px */
+  --fs-xs: 0.75rem;
+  /* 13px */
+  --fs-sm: 0.8125rem;
+  /* 14px */
+  --fs-md: 0.875rem;
+  /* 16px */
+  --fs-base: 1rem;
+  /* 20px */
+  --fs-lg: 1.25rem;
+  /* 24px */
+  --fs-xl: 1.5rem;
+  /* 31px */
+  --fs-2xl: 1.9375rem;
+}
