@@ -1,9 +1,10 @@
 import { ToastContainer } from "react-toastify";
+import Router from "./router/Router";
 
 const App = () => {
   return (
     <>
-      <div>App</div>
+      <Router />
       <ToastContainer />
     </>
   );
