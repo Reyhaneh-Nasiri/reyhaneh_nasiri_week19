@@ -1,12 +1,23 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 import BotostartIcon from "@/assets/icons/botostart-logo.svg";
 
 import styles from "./AuthForm.module.css";
 
-const AuthForm = ({ title, inputs, button, redirect, path, onSubmit }) => {
-  const { register, handleSubmit } = useForm();
+const AuthForm = ({
+  title,
+  inputs,
+  button,
+  redirect,
+  path,
+  onSubmit,
+  schema,
+}) => {
+  const { register, handleSubmit } = useForm({
+    resolver: schema ? yupResolver(schema) : undefined,
+  });
   return (
     <form className={styles.authForm} onSubmit={handleSubmit(onSubmit)}>
       <img
