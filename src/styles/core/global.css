@@ -8,7 +8,7 @@ html {
 
 html,
 body {
-    background: var(--background);
+    background: var(--bg-color);
     font-size: var(--fs-base);
     font-weight: var(--fw-regular);
     color: var(--text-main);
