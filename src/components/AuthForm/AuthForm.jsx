@@ -15,7 +15,11 @@ const AuthForm = ({
   onSubmit,
   schema,
 }) => {
-  const { register, handleSubmit } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     resolver: schema ? yupResolver(schema) : undefined,
   });
   return (
@@ -28,14 +32,20 @@ const AuthForm = ({
       <h3 className={styles.authForm__title}>{title}</h3>
       <div className={styles.authForm__inputs}>
         {inputs.map((input) => (
-          <input
-            key={input.id || input.name}
-            type={input.type || "text"}
-            name={input.name}
-            placeholder={input.placeholder}
-            className={styles.authForm__input}
-            {...register(input.name)}
-          />
+          <div className={styles.authForm__field} key={input.id || input.name}>
+            <input
+              type={input.type || "text"}
+              name={input.name}
+              placeholder={input.placeholder}
+              className={`${styles.authForm__input} ${
+                errors[input.name] ? styles["authForm__input--error"] : ""
+              }`}
+              {...register(input.name)}
+            />
+            <p className={styles.authForm__error}>
+              {errors[input.name]?.message}
+            </p>
+          </div>
         ))}
       </div>
       <button className={styles.authForm__button} type="submit">

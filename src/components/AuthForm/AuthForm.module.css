@@ -25,8 +25,17 @@
 .authForm__inputs {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
     margin-top: 63px;
+}
+
+.authForm__input--error {
+    border: 1px solid var(--error);
+}
+
+.authForm__field {
+    display: flex;
+    flex-direction: column;
 }
 
 .authForm__input {
@@ -56,4 +65,10 @@
     color: #3A8bed;
     margin-top: 16px;
     display: inline-block;
+}
+
+.authForm__error {
+    color: var(--error);
+    font-size: var(--fs-xs);
+    padding: 4px 2px 0;
 }
