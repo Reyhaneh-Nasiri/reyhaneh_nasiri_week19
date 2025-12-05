@@ -9,6 +9,8 @@ html {
 html,
 body {
     background: var(--background);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-regular);
     color: var(--text-main);
 }
 
