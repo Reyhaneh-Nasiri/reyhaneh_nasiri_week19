@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 import BotostartIcon from "@/assets/icons/botostart-logo.svg";
 
 import styles from "./AuthForm.module.css";
 
 const AuthForm = ({ title, inputs, button, redirect, path, onSubmit }) => {
+  const { register, handleSubmit } = useForm();
   return (
-    <form className={styles.authForm} onSubmit={onSubmit}>
+    <form className={styles.authForm} onSubmit={handleSubmit(onSubmit)}>
       <img
         src={BotostartIcon}
         alt="Botostart brand logo"
@@ -21,6 +23,7 @@ const AuthForm = ({ title, inputs, button, redirect, path, onSubmit }) => {
             name={input.name}
             placeholder={input.placeholder}
             className={styles.authForm__input}
+            {...register(input.name)}
           />
         ))}
       </div>
