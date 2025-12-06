@@ -18,3 +18,8 @@ body {
     background-color: var(--bg-color);
     color: var(--primary-color);
 }
+
+#root{
+    width: 100%;
+    height: 100%;
+}
