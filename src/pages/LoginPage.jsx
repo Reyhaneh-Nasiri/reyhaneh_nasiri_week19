@@ -21,10 +21,14 @@ const loginInputs = [
 const LoginPage = () => {
   const navigate = useNavigate()
   const handleLogin = async (data) => {
+    try {
       const res = await login(data);
       setCookie("token", res.data.token);
       toast.success("با موفقیت وارد شدید")
       navigate("/products");
+    } catch {
+      // error handled globally in interceptor
+    }
   };
 
   const loginSchema = yup.object().shape({
