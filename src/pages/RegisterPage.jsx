@@ -1,6 +1,9 @@
 import * as yup from "yup";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 import AuthForm from "@/components/AuthForm/AuthForm";
+import { register } from "@/services/auth";
 
 import styles from "./RegisterPage.module.css";
 
@@ -21,8 +24,12 @@ const registerInputs = [
 ];
 
 const RegisterPage = () => {
-  const handleRegister = (data) => {
-    console.log(data)
+  const navigate = useNavigate();
+  const handleRegister = async (data) => {
+    delete data.confirmPassword;
+    await register(data);
+    toast.success("ثبت‌نام با موفقیت انجام شد");
+    navigate("/login");
   };
 
   const registerSchema = yup.object().shape({
