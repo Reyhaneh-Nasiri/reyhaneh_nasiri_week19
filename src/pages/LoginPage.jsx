@@ -1,6 +1,10 @@
 import * as yup from "yup";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 import AuthForm from "@/components/AuthForm/AuthForm";
+import { login } from "@/services/auth";
+import { setCookie } from "@/utils/cookie";
 
 import styles from "./LoginPage.module.css";
 
@@ -15,8 +19,12 @@ const loginInputs = [
 ];
 
 const LoginPage = () => {
-  const handleLogin = (data) => {
-    console.log(data);
+  const navigate = useNavigate()
+  const handleLogin = async (data) => {
+      const res = await login(data);
+      setCookie("token", res.data.token);
+      toast.success("با موفقیت وارد شدید")
+      navigate("/products");
   };
 
   const loginSchema = yup.object().shape({
