@@ -51,4 +51,7 @@
   --fs-xl: 1.5rem;
   /* 31px */
   --fs-2xl: 1.9375rem;
+
+  --color-avatar-stroke: #f1f1f1;
+  --searchbar-bg: #fff;
 }
