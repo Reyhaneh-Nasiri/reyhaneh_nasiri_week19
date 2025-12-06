@@ -1,19 +1,34 @@
 :root {
-  /* Font Families */
+  /* FONT FAMILY */
   --font-family-base: "Vazirmatn", sans-serif;
 
-  /* Color Tokens – Brand & Neutrals */
+
+  /* COLOR TOKENS – BRAND + BASE COLORS */
   --primary-color: #55a3f0;
+
+  /* neutrals */
   --text-main: #282828;
   --bg-color: #f7f8f8;
   --card-bg-color: #ffffff;
   --border-color: #e4e4e4;
 
-  /* Semantic Colors (Status) */
+  /* links */
+  --link-text-color: #3a8bed;
+
+  /* buttons */
+  --primary-button-bg-color: #55a3f0;
+  --primary-button-text-color: #ffffff;
+
+  /* inputs */
+  --input-bg-color: #f2f2f2;
+
+
+  /* SEMANTIC COLORS (Status) */
   --success: #4ade80;
   --error: #f43f5e;
 
-  /* Typography */
+
+  /* FONT WEIGHTS */
   --fw-light: 300;
   --fw-regular: 400;
   --fw-medium: 500;
@@ -21,6 +36,7 @@
   --fw-bold: 700;
 
 
+  /* FONT SIZES (scale) */
   /* 12px */
   --fs-xs: 0.75rem;
   /* 13px */
