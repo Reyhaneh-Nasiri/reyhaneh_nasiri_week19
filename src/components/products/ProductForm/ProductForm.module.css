@@ -1,0 +1,71 @@
+.product-form {
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 30px 36px 31px 35px;
+    width: 90%;
+    max-width: 460px;
+}
+
+.product-form__title {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-medium);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.product-form__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.product-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.product-form__label {
+    font-size: var(--fs-md);
+    font-weight: var(--fw-medium);
+}
+
+.product-form__input {
+    width: 100%;
+    background-color: var(--input-bg-color);
+    border-radius: 8px;
+    font-size: var(--fs-md);
+    font-weight: var(--fw-light);
+    padding: 10px;
+}
+
+.product-form__input::placeholder {
+    color: #8d8d8d;
+}
+
+
+.product-form__buttons {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 19px;
+}
+
+.product-form__button {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-md);
+}
+
+.product-form__button--submit {
+    background-color: var(--primary-button-bg-color);
+    color: var(--primary-button-text-color);
+}
+
+.product-form__button--cancel {
+    background-color: #dfdfdf;
+    color: #282828CC;
+}
