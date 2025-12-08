@@ -18,6 +18,8 @@
   /* buttons */
   --primary-button-bg-color: #55a3f0;
   --primary-button-text-color: #ffffff;
+  --cancel-button-bg-color: #dfdfdf;
+  --cancel-button-text-color: #282828CC;
 
   /* inputs */
   --input-bg-color: #f2f2f2;
@@ -54,4 +56,5 @@
 
   --color-avatar-stroke: #f1f1f1;
   --searchbar-bg: #fff;
+  --surface-default: #fff;
 }

@@ -47,13 +47,11 @@
 }
 
 .authForm__button {
-    background-color: var(--primary-button-bg-color);
     border-radius: 15px;
     font-size: var(--fs-lg);
     font-weight: var(--fw-semibold);
     padding: 11px;
     width: 100%;
-    color: var(--primary-button-text-color);
     margin-top: 35px;
 }
 

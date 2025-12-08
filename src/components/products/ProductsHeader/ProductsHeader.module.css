@@ -27,8 +27,5 @@
 .products-header__button {
     width: 132px;
     border-radius: 10px;
-    background-color: var(--primary-button-bg-color);
-    color: var(--primary-button-text-color);
     padding: 10px 17px;
-
 }

@@ -57,13 +57,13 @@ const ProductForm = ({ title, confirmButton, initialValues, onSubmit }) => {
       <div className={styles["product-form__buttons"]}>
         <button
           type="submit"
-          className={`${styles["product-form__button"]} ${styles["product-form__button--submit"]}`}
+          className={`${styles["product-form__button"]} primary-button`}
         >
           {confirmButton}
         </button>
         <button
           type="button"
-          className={`${styles["product-form__button"]} ${styles["product-form__button--cancel"]}`}
+          className={`${styles["product-form__button"]} cancel-button`}
         >
           انصراف
         </button>

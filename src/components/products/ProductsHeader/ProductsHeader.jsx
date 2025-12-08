@@ -8,7 +8,7 @@ const ProductsHeader = () => {
         <LuSettings2 className={styles["products-header__icon"]} />
         مدیریت کالا
       </h2>
-      <button className={styles["products-header__button"]}>
+      <button className={`${styles["products-header__button"]} primary-button`}>
         افزودن محصول
       </button>
     </div>

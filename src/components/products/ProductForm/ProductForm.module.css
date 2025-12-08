@@ -1,9 +1,9 @@
 .product-form {
-    background-color: #fff;
+    background-color: var(--surface-default);
     border-radius: 30px;
     padding: 30px 36px 31px 35px;
-    width: 90%;
-    max-width: 460px;
+    width: 460px;
+    max-width: 100%;
 }
 
 .product-form__title {
@@ -58,14 +58,4 @@
     padding: 10px;
     font-weight: var(--fw-medium);
     font-size: var(--fs-md);
-}
-
-.product-form__button--submit {
-    background-color: var(--primary-button-bg-color);
-    color: var(--primary-button-text-color);
-}
-
-.product-form__button--cancel {
-    background-color: #dfdfdf;
-    color: #282828CC;
 }

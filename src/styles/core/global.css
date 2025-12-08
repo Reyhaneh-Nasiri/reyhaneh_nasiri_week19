@@ -19,11 +19,26 @@ body {
     color: var(--primary-color);
 }
 
-#root{
+#root {
     width: 100%;
     height: 100%;
 }
 
 body.body--no-scroll {
-  overflow-y: hidden;
+    overflow: hidden;
+}
+
+.primary-button {
+    background-color: var(--primary-button-bg-color);
+    color: var(--primary-button-text-color);
+}
+
+.cancel-button {
+    background-color: var(--cancel-button-bg-color);
+    color: var(--cancel-button-text-color);
+}
+
+.danger-button {
+    background-color: var(--error);
+    color: var(--primary-button-text-color);
 }

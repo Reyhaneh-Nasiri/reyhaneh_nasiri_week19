@@ -48,7 +48,10 @@ const AuthForm = ({
           </div>
         ))}
       </div>
-      <button className={styles.authForm__button} type="submit">
+      <button
+        className={`${styles.authForm__button} primary-button`}
+        type="submit"
+      >
         {button}
       </button>
       <Link className={styles.authForm__redirect} to={path}>
