@@ -1,8 +1,9 @@
 import closeIcon from "@/assets/icons/close.svg";
-
+import useModal from "@/hooks/useModal";
 import styles from "./DeleteProductModal.module.css";
 
 const DeleteProductModal = () => {
+  const { closeModal } = useModal();
   return (
     <div className={styles.modal}>
       <img
@@ -21,6 +22,7 @@ const DeleteProductModal = () => {
         <button
           type="button"
           className={`${styles.modal__button} cancel-button`}
+          onClick={() => closeModal()}
         >
           لغو
         </button>
