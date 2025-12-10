@@ -1,3 +1,4 @@
+import useModal from "@/hooks/useModal";
 import styles from "./ProductForm.module.css";
 
 const INPUT_CONFIG = [
@@ -25,6 +26,7 @@ const INPUT_CONFIG = [
 ];
 
 const ProductForm = ({ title, confirmButton, initialValues, onSubmit }) => {
+  const { closeModal } = useModal();
   const changeHandler = (e) => {
     console.log(e.target.name, e.target.value);
   };
@@ -64,6 +66,7 @@ const ProductForm = ({ title, confirmButton, initialValues, onSubmit }) => {
         <button
           type="button"
           className={`${styles["product-form__button"]} cancel-button`}
+          onClick={() => closeModal()}
         >
           انصراف
         </button>
