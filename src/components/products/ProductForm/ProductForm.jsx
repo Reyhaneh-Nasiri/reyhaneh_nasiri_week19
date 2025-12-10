@@ -4,6 +4,7 @@ import { productSchema } from "@/utils/validators/productsSchema";
 import { INPUT_CONFIG } from "./productForm.config";
 import useModal from "@/hooks/useModal";
 import styles from "./ProductForm.module.css";
+import ProductFormField from "../ProductFormField/ProductFormField";
 
 const ProductForm = ({ title, confirmButton, initialValues, onSubmit }) => {
   const { closeModal } = useModal();
@@ -22,29 +23,7 @@ const ProductForm = ({ title, confirmButton, initialValues, onSubmit }) => {
       {/* fields */}
       <div className={styles["product-form__fields"]}>
         {INPUT_CONFIG.map(({ label, ...inputProps }) => (
-          <div className={styles["product-form__field"]} key={inputProps.id}>
-            <label
-              htmlFor={inputProps.name}
-              className={styles["product-form__label"]}
-            >
-              {label}
-            </label>
-
-            <input
-              {...inputProps}
-              {...register(inputProps.name)}
-              className={`${styles["product-form__input"]} ${
-                errors[inputProps.name]
-                  ? styles["product-form__input--error"]
-                  : ""
-              }`}
-            />
-            {errors[inputProps.name] && (
-              <p className={styles["product-form__error"]}>
-                {errors[inputProps.name]?.message}
-              </p>
-            )}
-          </div>
+          <ProductFormField key={inputProps.id} label={label} inputProps={inputProps} errors={errors} register={register} />
         ))}
       </div>
       {/* actions */}
