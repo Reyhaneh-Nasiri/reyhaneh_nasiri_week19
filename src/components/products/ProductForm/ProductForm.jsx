@@ -3,7 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { productSchema } from "@/utils/validators/productsSchema";
 import { INPUT_CONFIG } from "./productForm.config";
 import styles from "./ProductForm.module.css";
-import ProductFormField from "../ProductFormField/ProductFormField";
+import ProductFormField from "./ProductFormField/ProductFormField";
 import ProductFormActions from "./ProductFormActions/ProductFormActions";
 
 const ProductForm = ({ title, confirmButton, initialValues, onSubmit }) => {
