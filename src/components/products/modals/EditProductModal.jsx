@@ -1,12 +1,17 @@
+import useModal from "@/hooks/useModal";
 import ProductForm from "../ProductForm/ProductForm";
 
-const EditProductModal = () => {
-  const submitHandler = () => {
-    console.log("submit");
+const EditProductModal = ({ initialValues }) => {
+  const { closeModal } = useModal();
+  const submitHandler = async (data, e) => {
+    e.preventDefault();
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    console.log(data);
+    closeModal();
   };
   return (
     <ProductForm
-      initialValues={{ name: "تیشرت", quantity: "22", price: "90000" }}
+      initialValues={initialValues}
       onSubmit={submitHandler}
       confirmButton="ثبت اطلاعات جدید"
       title="ویرایش اطلاعات"
