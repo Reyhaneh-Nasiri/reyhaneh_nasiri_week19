@@ -1,19 +1,22 @@
+import { useCreateProduct } from "@/hooks/react-query/products/useCreateProduct";
 import useModal from "@/hooks/useModal";
 import ProductForm from "../ProductForm/ProductForm";
 
 const AddProductModal = () => {
   const { closeModal } = useModal();
+  const { mutate, isPending } = useCreateProduct();
   const submitHandler = async (data, e) => {
     e.preventDefault();
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log(data);
-    closeModal();
+    mutate(data, {
+      onSuccess: () => closeModal(),
+    });
   };
   return (
     <ProductForm
-      onSubmit={submitHandler}
-      confirmButton="ایجاد"
       title="ایجاد محصول جدید"
+      confirmButton="ایجاد"
+      onSubmit={submitHandler}
+      isPending={isPending}
     />
   );
 };

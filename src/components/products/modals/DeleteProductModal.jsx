@@ -1,9 +1,17 @@
 import closeIcon from "@/assets/icons/close.svg";
 import useModal from "@/hooks/useModal";
+import { useDeleteProduct } from "@/hooks/react-query/products/useDeleteProduct";
 import styles from "./DeleteProductModal.module.css";
 
-const DeleteProductModal = () => {
+const DeleteProductModal = ({ id }) => {
+  const { mutate: deleteProductMutate } = useDeleteProduct();
   const { closeModal } = useModal();
+
+  const deleteHandler = () => {
+    deleteProductMutate(id, {
+      onSuccess: () => closeModal(),
+    });
+  };
   return (
     <div className={styles.modal}>
       <img
@@ -16,6 +24,7 @@ const DeleteProductModal = () => {
         <button
           type="button"
           className={`${styles.modal__button} danger-button`}
+          onClick={deleteHandler}
         >
           حذف
         </button>

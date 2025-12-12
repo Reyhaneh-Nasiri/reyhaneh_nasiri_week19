@@ -1,16 +1,26 @@
+import { useQueryClient } from "@tanstack/react-query";
 import styles from "./ProductPagination.module.css";
-const ProductPagination = () => {
-  return (
-    <div className={styles.pagination}>
+const ProductPagination = ({ page, setPage, totalPages }) => {
+  const queryClient = useQueryClient();
+
+  const buttons = [];
+  for (let i = 1; i <= totalPages; i++) {
+    buttons.push(
       <button
-        className={`${styles.pagination__step} ${styles["pagination__step--active"]}`}
+        key={i}
+        className={`${styles.pagination__step} ${
+          i == page ? styles["pagination__step--active"] : ""
+        }`}
+        onClick={() => {
+          queryClient.invalidateQueries(["products"]);
+          setPage(i);
+        }}
       >
-        ۱
+        {i}
       </button>
-      <button className={styles.pagination__step}>۲</button>
-      <button className={styles.pagination__step}>۳</button>
-    </div>
-  );
+    );
+  }
+  return <div className={styles.pagination}>{buttons}</div>;
 };
 
 export default ProductPagination;
