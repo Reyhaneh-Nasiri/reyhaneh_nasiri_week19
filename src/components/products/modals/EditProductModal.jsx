@@ -1,20 +1,27 @@
 import useModal from "@/hooks/useModal";
 import ProductForm from "../ProductForm/ProductForm";
+import { useUpdateProduct } from "@/hooks/react-query/products/useUpdateProduct";
 
-const EditProductModal = ({ initialValues }) => {
+const EditProductModal = ({ id, initialValues }) => {
+  const { mutate: updateProductMutate, isPending } = useUpdateProduct();
+
   const { closeModal } = useModal();
   const submitHandler = async (data, e) => {
     e.preventDefault();
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log(data);
-    closeModal();
+    updateProductMutate(
+      { id, data },
+      {
+        onSuccess: () => closeModal(),
+      }
+    );
   };
   return (
     <ProductForm
+      title="ویرایش اطلاعات"
+      confirmButton="ثبت اطلاعات جدید"
       initialValues={initialValues}
       onSubmit={submitHandler}
-      confirmButton="ثبت اطلاعات جدید"
-      title="ویرایش اطلاعات"
+      isPending={isPending}
     />
   );
 };

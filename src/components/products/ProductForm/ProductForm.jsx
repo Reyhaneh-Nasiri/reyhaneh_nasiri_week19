@@ -6,11 +6,17 @@ import styles from "./ProductForm.module.css";
 import ProductFormField from "./ProductFormField/ProductFormField";
 import ProductFormActions from "./ProductFormActions/ProductFormActions";
 
-const ProductForm = ({ title, confirmButton, initialValues, onSubmit }) => {
+const ProductForm = ({
+  title,
+  confirmButton,
+  initialValues,
+  onSubmit,
+  isPending,
+}) => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm({
     defaultValues: initialValues ?? { name: "", quantity: null, price: null },
     resolver: zodResolver(productSchema),
@@ -32,10 +38,7 @@ const ProductForm = ({ title, confirmButton, initialValues, onSubmit }) => {
         ))}
       </div>
       {/* actions */}
-      <ProductFormActions
-        isSubmitting={isSubmitting}
-        confirmButton={confirmButton}
-      />
+      <ProductFormActions isPending={isPending} confirmButton={confirmButton} />
     </form>
   );
 };

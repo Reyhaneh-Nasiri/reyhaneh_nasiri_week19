@@ -1,7 +1,8 @@
 import api from "./api";
 
 // GET /products
-const getProducts = () => api.get("/products");
+const getProducts = (page = 1, limit = 10) =>
+  api.get(`/products?page=${page}&limit=${limit}`);
 
 // GET /products/:id
 const getProduct = (id) => api.get(`/products/${id}`);

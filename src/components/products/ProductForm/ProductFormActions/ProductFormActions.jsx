@@ -1,16 +1,16 @@
 import useModal from "@/hooks/useModal";
-import styles from "./ProductsFormAction.module.css"
+import styles from "./ProductsFormAction.module.css";
 
-const ProductFormActions = ({ isSubmitting, confirmButton }) => {
+const ProductFormActions = ({ isPending, confirmButton }) => {
   const { closeModal } = useModal();
   return (
     <div className={styles["product-form__buttons"]}>
       <button
-        disabled={isSubmitting}
+        disabled={isPending}
         type="submit"
         className={`${styles["product-form__button"]} primary-button`}
       >
-        {isSubmitting ? "در حال پردازش..." : confirmButton}
+        {isPending ? "در حال پردازش..." : confirmButton}
       </button>
       <button
         type="button"
