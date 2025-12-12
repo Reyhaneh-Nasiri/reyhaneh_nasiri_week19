@@ -8,7 +8,7 @@ const ProductItem = ({ name, quantity, price, id }) => {
       <p className={styles.product__title}>{name}</p>
       <p className={styles.product__quantity}>{quantity}</p>
       <p className={styles.product__price}>
-        {price} <span>هزار تومان</span>
+        {price} <span>{price < 1000000 ? "هزار تومان" : "میلیون تومان"}</span>
       </p>
       <p className={styles.product__id}>{id}</p>
       <div className={styles["product__action-group"]}>
