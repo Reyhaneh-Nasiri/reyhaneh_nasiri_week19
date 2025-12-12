@@ -1,0 +1,20 @@
+.product-form {
+    background-color: var(--surface-default);
+    border-radius: 30px;
+    padding: 30px 36px 31px 35px;
+    width: 460px;
+    max-width: 100%;
+}
+
+.product-form__title {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-medium);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.product-form__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

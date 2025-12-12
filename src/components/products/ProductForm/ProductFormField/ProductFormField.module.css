@@ -1,0 +1,33 @@
+.product-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.product-form__label {
+    font-size: var(--fs-md);
+    font-weight: var(--fw-medium);
+}
+
+.product-form__input {
+    width: 100%;
+    background-color: var(--input-bg-color);
+    border-radius: 8px;
+    font-size: var(--fs-md);
+    font-weight: var(--fw-light);
+    padding: 10px;
+}
+
+.product-form__input::placeholder {
+    color: #8d8d8d;
+}
+
+.product-form__input--error {
+    border: 1px solid var(--error);
+}
+
+.product-form__error {
+    color: var(--error);
+    font-size: var(--fs-xs);
+    padding: 4px 2px 0;
+}

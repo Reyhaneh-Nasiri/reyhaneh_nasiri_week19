@@ -1,0 +1,60 @@
+:root {
+  /* FONT FAMILY */
+  --font-family-base: "Vazirmatn", sans-serif;
+
+
+  /* COLOR TOKENS – BRAND + BASE COLORS */
+  --primary-color: #55a3f0;
+
+  /* neutrals */
+  --text-main: #282828;
+  --bg-color: #f7f8f8;
+  --card-bg-color: #ffffff;
+  --border-color: #e4e4e4;
+
+  /* links */
+  --link-text-color: #3a8bed;
+
+  /* buttons */
+  --primary-button-bg-color: #55a3f0;
+  --primary-button-text-color: #ffffff;
+  --cancel-button-bg-color: #dfdfdf;
+  --cancel-button-text-color: #282828CC;
+
+  /* inputs */
+  --input-bg-color: #f2f2f2;
+
+
+  /* SEMANTIC COLORS (Status) */
+  --success: #4ade80;
+  --error: #f43f5e;
+
+
+  /* FONT WEIGHTS */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+
+  /* FONT SIZES (scale) */
+  /* 12px */
+  --fs-xs: 0.75rem;
+  /* 13px */
+  --fs-sm: 0.8125rem;
+  /* 14px */
+  --fs-md: 0.875rem;
+  /* 16px */
+  --fs-base: 1rem;
+  /* 20px */
+  --fs-lg: 1.25rem;
+  /* 24px */
+  --fs-xl: 1.5rem;
+  /* 31px */
+  --fs-2xl: 1.9375rem;
+
+  --color-avatar-stroke: #f1f1f1;
+  --searchbar-bg: #fff;
+  --surface-default: #fff;
+}
