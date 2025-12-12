@@ -14,7 +14,7 @@ const SearchBar = () => {
       <div className={styles["profile-card"]}>
         <div className={styles["profile-card__wrapper"]}>
           <div className={styles["profile-card__avatar"]}>
-            <img src="src/assets/images/manager.jpg" alt="Profile image" />
+            <img src="src/assets/images/manager.webp" alt="Profile image" />
           </div>
           <div className={styles["profile-card__details"]}>
             <h2
