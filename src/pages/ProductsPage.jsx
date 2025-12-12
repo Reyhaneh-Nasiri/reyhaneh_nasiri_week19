@@ -8,13 +8,18 @@ import { useProducts } from "@/hooks/react-query/products/useProductsQuery";
 const ProductsPage = () => {
   const [page, setPage] = useState(1);
 
-  const { data, isPending, isError } = useProducts(page);
+  const { data, isPending, isError, isLoading } = useProducts(page);
   console.log(data);
   return (
     <div>
       <SearchBar />
       <ProductsHeader />
-      <ProductsList data={data} isPending={isPending} isError={isError} />
+      <ProductsList
+        data={data}
+        isPending={isPending}
+        isLoading={isLoading}
+        isError={isError}
+      />
       <ProductPagination
         page={page}
         setPage={setPage}
