@@ -2,10 +2,10 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import AuthForm from "@/components/AuthForm/AuthForm";
-import { login } from "@/services/auth";
-import { setCookie } from "@/utils/cookie";
+import { login as loginService } from "@/services/auth";
 import { loginSchema } from "@/utils/validators/loginSchema";
 
+import useAuth from "@/hooks/auth/useAuth";
 import styles from "./LoginPage.module.css";
 
 const loginInputs = [
@@ -19,15 +19,16 @@ const loginInputs = [
 ];
 
 const LoginPage = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const { login } = useAuth();
   const handleLogin = async (data) => {
     try {
-      const res = await login(data);
-      setCookie("token", res.data.token);
-      toast.success("با موفقیت وارد شدید")
-      navigate("/products");
+      const res = await loginService(data);
+      login(res.data.token);
+      toast.success("با موفقیت وارد شدید");
+      navigate("/products", { replace: true });
     } catch {
-      // error handled globally in interceptor
+      // error handled globally
     }
   };
 
