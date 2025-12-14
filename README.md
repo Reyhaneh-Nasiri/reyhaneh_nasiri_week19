@@ -4,7 +4,7 @@ A product management dashboard built with ***React*** that includes authenticati
 
 This project was developed as part of the [Botostart Bootcamp](https://botostart.ir/).
 
-> __The backend API used in this project was provided as part of the Botostart Bootcamp. My primary focus in this project was on frontend architecture, state management, React Query integration, and user experience.__
+> __The backend API used in this project was provided as part of the ***Botostart Bootcamp***. My primary focus in this project was on frontend architecture, state management, React Query integration, and user experience.__
 
 ___
 
@@ -45,10 +45,10 @@ ___
 ## Tech Stack
 *   React + Vite
 *   React Router
-*   [@tanstack/react-query](tanstack.com)
-*   [React Hook Form](react-hook-form.com)
-*   [Zod](zod.dev)
-*   [Yup](github.com)
+*   [@tanstack/react-query](https://tanstack.com/query)
+*   [React Hook Form](https://react-hook-form.com)
+*   [Zod](https://zod.dev)
+*   [Yup](https://github.com/jquense/yup)
 *   Axios
 *   React Toastify
 *   React Loading Skeleton
@@ -67,7 +67,7 @@ ___
     [https://github.com/Reyhaneh-Nasiri/reyhaneh_nasiri_week19_api](https://github.com/Reyhaneh-Nasiri/reyhaneh_nasiri_week19_api)
 
     ```bash
-    git clone github.com
+    git clone https://github.com/Reyhaneh-Nasiri/reyhaneh_nasiri_week19_api.git
     cd warehouse-api
     npm install
     npm start
