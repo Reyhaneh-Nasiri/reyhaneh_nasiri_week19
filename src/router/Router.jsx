@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
+import ErrorBoundary from "@/components/layout/ErrorBoundary";
 
 const ProductsPage = lazy(() => import("@/pages/ProductsPage"));
 const RegisterPage = lazy(() => import("@/pages/RegisterPage"));
@@ -19,7 +20,14 @@ const Router = () => {
           <Route path="/register" element={<RegisterPage />} />
           {/* Protected Routes */}
           <Route element={<ProtectedRoute />}>
-            <Route path="/products" element={<ProductsPage />} />
+            <Route
+              path="/products"
+              element={
+                <ErrorBoundary>
+                  <ProductsPage />
+                </ErrorBoundary>
+              }
+            />
           </Route>
           {/* 404 */}
           <Route path="/*" element={<PageNotFound />} />
