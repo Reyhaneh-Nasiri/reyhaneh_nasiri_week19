@@ -35,6 +35,8 @@ ___
 *   Persian error messages
 
 ### UI & UX
+*   Error Boundaries
+*   Custom Skeleton Loading
 *   Global Modal System
 *   Skeleton Loading
 *   Toast Notifications
@@ -51,7 +53,7 @@ ___
 *   [Yup](https://github.com/jquense/yup)
 *   Axios
 *   React Toastify
-*   React Loading Skeleton
+*   Custom Skeleton Components (for loading states)
 *   CSS Modules
 *   Context API
 
@@ -147,6 +149,7 @@ This project focuses on frontend architecture and best practices, designed with 
     │   └───images
     ├───components
     │   ├───AuthForm
+    │   ├───layout
     │   ├───products
     │   │   ├───modals
     │   │   ├───ProductForm
@@ -157,8 +160,8 @@ This project focuses on frontend architecture and best practices, designed with 
     │   │   ├───ProductsHeader
     │   │   └───ProductsList
     │   ├───SearchBar
-    │   ├───skeleton
     │   └───ui
+    │       ├───ErrorBoundaryDisplay
     │       └───Modal
     ├───contexts
     │   ├───auth
@@ -171,6 +174,7 @@ This project focuses on frontend architecture and best practices, designed with 
     ├───pages
     ├───router
     ├───services
+    ├───skeletons
     ├───styles
     │   └───core
     └───utils
@@ -181,7 +185,6 @@ This project focuses on frontend architecture and best practices, designed with 
 ## Future Improvements
 - Dark Mode
 - Internationalization (i18n)
-- Error Boundary implementation
 - Unit & Integration Tests
 - Responsive Enhancements
 
