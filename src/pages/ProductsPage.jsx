@@ -3,6 +3,7 @@ import ProductPagination from "@/components/products/ProductPagination/ProductPa
 import ProductsHeader from "@/components/products/ProductsHeader/ProductsHeader";
 import ProductsList from "@/components/products/ProductsList/ProductsList";
 import SearchBar from "@/components/SearchBar/SearchBar";
+import ErrorBoundary from "@/components/layout/ErrorBoundary";
 import { useProducts } from "@/hooks/react-query/products/useProductsQuery";
 
 const ProductsPage = () => {
@@ -14,12 +15,14 @@ const ProductsPage = () => {
     <div>
       <SearchBar />
       <ProductsHeader />
-      <ProductsList
-        data={data}
-        isPending={isPending}
-        isLoading={isLoading}
-        isError={isError}
-      />
+      <ErrorBoundary>
+        <ProductsList
+          data={data}
+          isPending={isPending}
+          isLoading={isLoading}
+          isError={isError}
+        />
+      </ErrorBoundary>
       <ProductPagination
         page={page}
         setPage={setPage}

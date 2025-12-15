@@ -1,0 +1,19 @@
+.tableRow {
+    display: grid;
+    grid-template-columns: 200px 100px 150px 1fr 80px;
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.actionIcons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.columnId,
+.columnPrice,
+.columnStock,
+.columnName {
+    padding: 0 5px;
+}
