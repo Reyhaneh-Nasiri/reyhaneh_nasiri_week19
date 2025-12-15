@@ -1,14 +1,14 @@
 import { TbEdit, TbTrash } from "react-icons/tb";
 import useModal from "@/hooks/useModal";
 import styles from "./ProductItem.module.css";
-import ProductSkeleton from "@/components/skeleton/ProductSkeleton";
+import ProductItemSkeleton from "@/skeletons/ProductItemSkeleton";
 const ProductItem = ({ name, quantity, price, id, isPending }) => {
   const { openModal } = useModal();
 
   return (
     <>
       {isPending ? (
-        <ProductSkeleton />
+        <ProductItemSkeleton />
       ) : (
         <li className={styles.product}>
           <p className={styles.product__title}>{name}</p>
